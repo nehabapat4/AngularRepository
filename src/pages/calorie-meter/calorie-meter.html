@@ -1,0 +1,35 @@
+<!--
+  Generated template for the CalorieMeterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Calorie Meter</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<p>Provide details of food you had and the activities you performed today and get the estimated energy expenditure..</p>
+<ion-list radio-group>
+  <ion-list-header>
+    <ion-icon color="danger" item-start="" name="restaurant" role="img" class="icon icon-md icon-md-danger ion-md-restaurant item-icon" aria-label="restaurant"></ion-icon>
+     Food
+  </ion-list-header>
+  <ion-item class="item item-block item-md item-radio " *ngFor="let option of foodOptions;">
+    <ion-label color="dark" class="label label-md label-md-dark" id="lbl-8">{{option}}</ion-label>
+    <ion-radio checked="false" value="{{option}}" class="radio radio-md" (ionSelect)="selectedFoodType(option)">
+      <div class="radio-icon "> 
+        <div class="radio-inner"></div> 
+      </div>
+      <button class="item-cover disable-hover item-cover-md item-cover-default item-cover-default-md" ion-button="item-cover" role="radio" type="button" id="rb-8-0" aria-checked="true" aria-labelledby="lbl-8" aria-disabled="false">
+        <span class="button-inner"> </span>
+      </button>
+    </ion-radio>
+  </ion-item>
+</ion-list>
+</ion-content>
